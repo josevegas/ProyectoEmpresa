@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  wddescriptionhead='Si deseas ser parte del mundo digital, te podemos brindar los siguientes productos'
-  wdservicios=['Diseño de Páginaa Web','Aplicación E-Commerce','Catálogo Digital']
+  wddescriptionhead='Si estás buscando contar con un sitio web profesional, funcional, flexible y mejorar la presencia online de tu negocio con diseños modernos y atractivos, te podemos brindar el diseño de:'
+  wdservicios=['Landing Page','Página Web','Aplicación E-Commerce','Catálogo Digital']
 }

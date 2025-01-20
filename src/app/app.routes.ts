@@ -7,7 +7,7 @@ import { GraphdesingComponent } from './components/graphdesing/graphdesing.compo
 
 export const routes: Routes = [
     {
-        path: '',
+        path: 'inicio',
         component: HomeComponent,
         title: 'Mi Nombre',
     },
@@ -30,5 +30,14 @@ export const routes: Routes = [
         path: 'imagencorporativa',
         component: GraphdesingComponent,
         title: 'Imagen Corporativa',
+    },
+    {
+        path: '',
+        redirectTo: '/inicio',
+        pathMatch: 'full',
+    },
+    {
+        path: '**',
+        redirectTo: '/inicio'
     }
 ];
