@@ -1,43 +1,45 @@
-<div style="align-items: center;">
-    <h3>Bienvenido</h3>
-    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div class="row">
+    <div class="col-lg-8 col-md-10 col-12 mx-auto" style="align-items: center;">
+        <h3>Bienvenido</h3>
+        <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="bg-primary" style="color: whitesmoke; height: auto; padding: 15px 125px;">
+                        <h4 style="text-align: center; font-family: Raleway; font-size: 30px;">Diseño Web</h4>
+                        <span style="font-family: Montserrat; font-size: 20px;">{{wddescriptionhead}}</span>
+                        <ul style="font-family: Montserrat; font-size: 20px;">
+                            @for (item of wdservicios; track $index) {
+                                <li>{{item}}</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-primary" style="color: whitesmoke; height: auto; padding: 15px 125px;">
+                        <h4 style="text-align: center; font-family: Raleway; font-size: 30px;">Diseño Organizacional</h4>
+                        <span style="font-family: Montserrat; font-size: 20px;">Un pequeño resumen del servicio</span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-primary" style="color: whitesmoke; height: auto; padding: 15px 125px;">
+                        <h4 style="text-align: center; font-family: Raleway; font-size: 30px;">Imagen Corporativa</h4>
+                        <span style="font-family: Montserrat; font-size: 20px;">Un pequeño resumen del servicio</span>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="bg-primary" style="color: whitesmoke; height: 240px; padding: 15px 125px;">
-                    <h4 style="text-align: center;">Diseño Web</h4>
-                    <span>{{wddescriptionhead}}</span>
-                    <ul>
-                        @for (item of wdservicios; track $index) {
-                            <li>{{item}}</li>
-                        }
-                    </ul>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="bg-primary" style="color: whitesmoke; height: 240px; padding: 15px 125px;">
-                    <h4>Diseño Organizacional</h4>
-                    <span>Un pequeño resumen del servicio</span>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="bg-primary" style="color: whitesmoke; height: 240px; padding: 15px 125px;">
-                    <h4>Imagen Corporativa</h4>
-                    <span>Un pequeño resumen del servicio</span>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 </div>

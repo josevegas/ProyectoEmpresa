@@ -9,7 +9,7 @@ export const routes: Routes = [
     {
         path: 'inicio',
         component: HomeComponent,
-        title: 'Mi Nombre',
+        title: 'Kalicode Design Studio',
     },
     {
         path: 'disenoweb',
