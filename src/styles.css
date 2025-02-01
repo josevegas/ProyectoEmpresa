@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #F5F5F5;
+    color: #2E2E2E;
+}
+nav{
+    background-color: #FFA07A;
+    border-color: #1A1A1A;
+}
+.border-calico{
+    border-color: #1A1A1A;
+}
