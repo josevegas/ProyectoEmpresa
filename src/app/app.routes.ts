@@ -12,24 +12,29 @@ export const routes: Routes = [
         title: 'Kalicode Design Studio',
     },
     {
-        path: 'disenoweb',
-        component: WebdesingComponent,
-        title: 'Diseño Web',
-    },
-    {
         path: 'quienes-somos',
         component: WeareComponent,
         title: 'Quienes Somos',
     },
     {
-        path: 'diseno-organizacional',
-        component: OrgdesingComponent,
-        title: 'Diseño Organizacional',
-    },
-    {
-        path: 'imagencorporativa',
-        component: GraphdesingComponent,
-        title: 'Imagen Corporativa',
+        path: 'servicios',
+        children:[
+            {
+                path: 'disenoweb',
+                component: WebdesingComponent,
+                title: 'Diseño Web',
+            },
+            {
+                path: 'diseno-organizacional',
+                component: OrgdesingComponent,
+                title: 'Diseño Organizacional',
+            },
+            {
+                path: 'imagencorporativa',
+                component: GraphdesingComponent,
+                title: 'Imagen Corporativa',
+            },
+        ]
     },
     {
         path: '',

@@ -1,1 +1,118 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --naranja-suave: #FF8C42;
+    --blanco-roto: #F5F5F5;
+    --gris-oscuro: #2E2E2E;
+    --beige: #D2B48C;
+    --negro-suave: #1A1A1A;
+    --dorado: #FFD700;
+}
+/* Estilos generales */
+body {
+    background-color: var(--blanco-roto);
+    color: var(--gris-oscuro);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Encabezado */
+header {
+    background-color: var(--naranja-suave);
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    color: var(--blanco-roto);
+    margin: 0;
+    font-size: 2.5rem;
+}
+/* Barra de navegación */
+nav {
+    background-color: var(--gris-oscuro);
+    padding: 10px;
+}
+.active-link {
+    color: #FF8C42 !important; /* Naranja suave */
+    font-weight: bold;
+    border-bottom: 2px solid #FFD700; /* Dorado */
+}
+.nav-item.dropdown.active .nav-link {
+    color: #FF8C42 !important;
+}
+.dropdown-menu {
+    border: 1px solid #FF8C42;
+}
+.dropdown-item.active-link {
+    background-color: #F5F5F5; /* Blanco roto */
+    border-left: 4px solid #FF8C42;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: var(--blanco-roto);
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: var(--dorado);
+}
+/* Contenido principal */
+main {
+    padding: 20px;
+    background-color: var(--blanco-roto);
+}
+section {
+    margin-bottom: 30px;
+}
+section h2 {
+    color: var(--naranja-suave);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+section p {
+    line-height: 1.6;
+}
+/* Botones */
+button {
+    background-color: var(--naranja-suave);
+    color: var(--blanco-roto);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: var(--dorado);
+}
+/* Pie de página */
+footer {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco-roto);
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+footer p {
+    margin: 0;
+}
+footer a {
+    color: var(--blanco-roto);
+    text-align: center;
+    text-decoration: none;
+}
+/* Acentos y detalles */
+.accent {
+    color: var(--dorado);
+}
+.border-accent {
+    border: 2px solid var(--dorado);
+}
