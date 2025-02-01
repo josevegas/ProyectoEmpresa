@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand-lg border-calico interactive-calico sticky-top" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg sticky-top" style="font-family: Oswald; font-size: 26px;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            Mi Nombre
+        <a class="navbar-brand" routerLink="/">
+            {{name}}
         </a>
-        <button class="navbar-toggler border-calico interactive-calico" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarToggler">
@@ -14,17 +14,23 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/quienes-somos" routerLinkActive="active">Quienes somos</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
-                    <ul class="dropdown-menu bg-success">
+                <li class="nav-item dropdown" [class.active]="isServiciosActive()">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                    <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item nav-link" routerLink="/disenoweb" routerLinkActive="active">Diseño Web</a>
+                            <a class="dropdown-item" 
+                            routerLink="/servicios/disenoweb" 
+                            routerLinkActive="active">Diseño Web</a>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropdown-item nav-link" routerLink="/diseno-organizacional"  routerLinkActive="active">Diseño Organizacional</a>
+                        <li>
+                            <a class="dropdown-item" 
+                            routerLink="/servicios/diseno-organizacional"  
+                            routerLinkActive="active">Diseño Organizacional</a>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropdown-item nav-link" routerLink="/imagencorporativa" routerLinkActive="active">Imagen Corporativa</a>
+                        <li>
+                            <a class="dropdown-item" 
+                            routerLink="/servicios/imagencorporativa" 
+                            routerLinkActive="active">Imagen Corporativa</a>
                         </li>
                     </ul>
                 </li>

@@ -9,12 +9,7 @@ export const routes: Routes = [
     {
         path: 'inicio',
         component: HomeComponent,
-        title: 'Mi Nombre',
-    },
-    {
-        path: 'disenoweb',
-        component: WebdesingComponent,
-        title: 'Diseño Web',
+        title: 'Kalicode Design Studio',
     },
     {
         path: 'quienes-somos',
@@ -22,14 +17,24 @@ export const routes: Routes = [
         title: 'Quienes Somos',
     },
     {
-        path: 'diseno-organizacional',
-        component: OrgdesingComponent,
-        title: 'Diseño Organizacional',
-    },
-    {
-        path: 'imagencorporativa',
-        component: GraphdesingComponent,
-        title: 'Imagen Corporativa',
+        path: 'servicios',
+        children:[
+            {
+                path: 'disenoweb',
+                component: WebdesingComponent,
+                title: 'Diseño Web',
+            },
+            {
+                path: 'diseno-organizacional',
+                component: OrgdesingComponent,
+                title: 'Diseño Organizacional',
+            },
+            {
+                path: 'imagencorporativa',
+                component: GraphdesingComponent,
+                title: 'Imagen Corporativa',
+            },
+        ]
     },
     {
         path: '',
