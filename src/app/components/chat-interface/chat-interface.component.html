@@ -1,0 +1,27 @@
+<div class="container mt-6">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Asistente con Gemini</h5>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <textarea 
+                class="form-control"
+                (ngModel)="userInput"
+                placeholder="Escribe tu pregunta..."
+                rows="3"
+                ></textarea>
+            </div>
+            <button
+            class="btn btn-success"
+            (click)="sendPrompt()"
+            [disabled]="isLoading">
+                <span >@if(!isLoading){Enviar}@if(isLoading){Loading}</span>
+            </button>
+            <div class="mt-4 p-3 bg-light rounded" NgIf="response">
+                <h6>Respuesta:</h6>
+                <p class="mb-0">{{response}}</p>
+            </div>
+        </div>
+    </div>
+</div>
