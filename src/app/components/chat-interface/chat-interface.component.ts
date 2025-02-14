@@ -12,19 +12,21 @@ import { FormsModule } from '@angular/forms';
 })
 export class ChatInterfaceComponent {
   userInput='';
+  conversation:{sender:string,text:string}[]=[];
   response='';
   isLoading=false;
   constructor(private geminiService: GeminiService) { }
   async sendPrompt(){
-    console.log(this.userInput)
-    if(!this.userInput.trim()) return
+    if(!this.userInput.trim()) return;
+    this.conversation.push({sender:'user',text:this.userInput});
     this.isLoading=true;
     try{
-      console.log(this.userInput)
       this.response=await this.geminiService.generateText(this.userInput);
+      this.conversation.push({sender:'ai',text:this.response});
     }catch(error){
       this.response='Error al comunicarse con la API';
     }
+    this.userInput='';
     this.isLoading=false;
   }
 }
