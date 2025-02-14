@@ -4,6 +4,7 @@
     border: 1px solid #ccc;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .conversation {
@@ -13,25 +14,49 @@
 }
 
 .chat-header {
-    flex: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #007bff; /* bg-primary */
+    color: #ffffff; /* text-white */
 }
 
 .message {
-    margin-bottom: 10px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #f8f9fa;
 }
 
 .message.user {
     text-align: right;
+    background-color: #e2e6ea;
 }
 
 .message.ai {
     text-align: left;
+    background-color: #d1ecf1;
 }
 
 .input-container {
-    display: flex;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
     padding: 10px;
     border-top: 1px solid #ccc;
+    background-color: #f8f9fa;
+}
+
+.input-container textarea {
+    width: 100%;
+    resize: none;
+    margin-bottom: 10px;
 }
 
 input {

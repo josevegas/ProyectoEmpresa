@@ -1,27 +1,27 @@
 <div class="chat-container">
+    <div class="chat-header bg-primary text-white">
+        <h5 class="mb-0">Asistente con Gemini</h5>
+    </div>
     <div class="conversation">
-        <div class="chat-header bg-primary text-white">
-            <h5 class="mb-0">Asistente con Gemini</h5>
-        </div>
         @for (message of conversation; track $index) {
             <div class="message {{message.sender}}">
                 <p>{{message.text}}</p>
             </div>
         }
-        <div class="input-container">
-            <div class="mb-3">
-                <textarea 
-                class="form-control"
-                [(ngModel)]="userInput"
-                placeholder="Escribe tu pregunta..."
-                rows="3"
-                ></textarea>
-            </div>
-            <button
-            (click)="sendPrompt()"
-            [disabled]="isLoading">
-                <span >@if(!isLoading){Enviar}@if(isLoading){Loading}</span>
-            </button>
+    </div>
+    <div class="input-container">
+        <div class="mb-3">
+            <textarea 
+            class="form-control"
+            [(ngModel)]="userInput"
+            placeholder="Escribe tu pregunta..."
+            rows="2"
+            ></textarea>
         </div>
+        <button
+        (click)="sendPrompt()"
+        [disabled]="isLoading">
+            <span >@if(!isLoading){Enviar}@if(isLoading){Loading}</span>
+        </button>
     </div>
 </div>
