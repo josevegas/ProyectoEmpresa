@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Output,EventEmitter } from '@angular/core';
 import {GeminiService} from '../../services/gemini.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './chat-interface.component.css'
 })
 export class ChatInterfaceComponent {
+  @Output() close=new EventEmitter<void>();
   userInput='';
   conversation:{sender:string,text:string}[]=[];
   response='';
@@ -28,5 +29,8 @@ export class ChatInterfaceComponent {
     }
     this.userInput='';
     this.isLoading=false;
+  }
+  closeChat(){
+    this.close.emit();
   }
 }

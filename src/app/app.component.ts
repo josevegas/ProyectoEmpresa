@@ -15,4 +15,8 @@ import { ChatInterfaceComponent } from './components/chat-interface/chat-interfa
 export class AppComponent {
   title = 'Kalicode Design Studio';
   name='Kalicode Design Studio';
+  isChatOpen=false;
+  openChat(){
+    this.isChatOpen=!this.isChatOpen;
+  }
 }

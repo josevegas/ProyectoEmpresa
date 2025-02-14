@@ -1,6 +1,7 @@
 <div class="chat-container">
     <div class="chat-header bg-primary text-white">
         <h5 class="mb-0">Asistente con Gemini</h5>
+        <button class="btn btn-danger btn-sm" (click)="closeChat()">X</button>
     </div>
     <div class="conversation">
         @for (message of conversation; track $index) {

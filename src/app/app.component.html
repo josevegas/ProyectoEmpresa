@@ -2,5 +2,10 @@
 <div class="container">
     <router-outlet />
 </div>
-<app-chat-interface></app-chat-interface>
+<div class="container mt-5">
+    @if (isChatOpen){
+        <app-chat-interface (close)="openChat()"></app-chat-interface>
+    }
+    <button class="btn btn-primary" (click)="openChat()">Chat</button>
+</div>
 <app-footer [name]="name"></app-footer>
